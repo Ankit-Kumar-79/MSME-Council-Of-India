@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MSME | Donate Us</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/logo/logo.png"
+    />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/spacing.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/vendor/jquery.js"></script>
+  </head>
+  <style>
+    .donation-card {
+      padding-top: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .left-side {
+      flex: 1;
+      background-color: #ff7043;
+      color: #ffffff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .left-side img {
+      width: 100%;
+      /* max-width: 250px; */
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      margin-bottom: 15px;
+    }
+    .left-side img:hover {
+      transform: translateY(-10px);
+    }
+
+    .left-side h2 {
+      font-family: var(--tp-ff-body);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .left-side p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    .focus-areas {
+      margin-top: 20px;
+    }
+
+    .focus-areas h3 {
+      font-family: var(--tp-ff-body);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .focus-areas ul {
+      list-style: none;
+      padding-left: 20px;
+      font-size: 1.2rem;
+      text-align: left;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .focus-areas ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .focus-areas ul li::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background-color: #141f39;
+      border-radius: 50%;
+    }
+
+    .right-side {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    .right-side img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .right-side img:hover {
+      transform: translateY(-10px);
+    }
+
+    .qr-code {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .account-details {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .account-details .name {
+      font-weight: 600;
+      color: #ff7043;
+      margin-bottom: 10px;
+    }
+
+    .account-details .msmee {
+      font-weight: 400;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+      }
+
+      .donation-card {
+        flex-direction: column;
+        max-width: 90%;
+        margin: auto;
+      }
+
+      .left-side,
+      .right-side {
+        padding: 20px;
+      }
+
+      .left-side h2 {
+        font-size: 2rem;
+      }
+
+      .left-side p,
+      .focus-areas ul {
+        font-size: 1rem;
+      }
+
+      .right-side img,
+      .qr-code {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+      }
+
+      .account-details {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .focus-areas h3 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+  <body>
+    <!-- back-to-top -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+        <svg
+          width="12"
+          height="7"
+          viewBox="0 0 12 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 6L6 1L1 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-icon">
+          <img src="assets/img/logo/logo.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End -->
+
+    <header class="tp-header-height" id="header">
+      <script>
+        $("#header").load("header.html");
+      </script>
+    </header>
+
+    <main>
+      <!-- breadcam-area-start -->
+      <div
+        class="tp-breadcrumb-area tp-breadcrumb-spacing bg-position"
+        data-background="assets/img/breadcrumb/01.jpg"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="tp-breadcrumb-content">
+                <h2
+                  class="tp-breadcrumb-title mb-15 wow fadeInRight"
+                  data-wow-duration=".9s"
+                  data-wow-delay=".3s"
+                >
+                  Donate Us
+                </h2>
+                <div
+                  class="tp-breadcrumb-list wow fadeInLeft"
+                  data-wow-duration=".9s"
+                  data-wow-delay=".3s"
+                >
+                  <span><a href="index.html">Home</a></span>
+                  <span class="tp-breadcrumb-dvdr">-</span>
+                  <span class="tp-breadcrumb-title-pre">Donate Us</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- breadcam-area-end -->
+
+      <!-- tp-contact-item-area-start -->
+      <div class="tp-contact-item-area pt-80 mb-70">
+        <div class="container">
+          <div class="donation-card">
+            <div class="left-side">
+              <div style="text-align: center">
+                <img
+                  src="./assets/Myimg/MSME/donation-first.jpeg"
+                  alt="Donation Image"
+                />
+              </div>
+              <h2>MSME Promotion Council India</h2>
+              <p>
+                Empowering micro, small, and medium enterprises through
+                financial support, skill development, and advocacy. Join us in
+                making a difference.
+              </p>
+              <div class="focus-areas">
+                <h3>Our Focus Areas:</h3>
+                <ul>
+                  <li>Economic Growth</li>
+                  <li>Employment Generation</li>
+                  <li>Entrepreneurship Promotion</li>
+                  <li>Balanced Regional Development</li>
+                  <li>Export Promotion</li>
+                </ul>
+              </div>
+            </div>
+            <div class="right-side">
+              <img
+                src="./assets/Myimg/MSME/donation-payment.jpeg"
+                alt="QR Code for Donation"
+                class="qr-code"
+              />
+              <div class="account-details">
+                <div class="name" style="text-align: center">
+                  Account Details:
+                </div>
+                <div class="msmee">
+                  <strong>Name:</strong> MSME Promotion Council India<br />
+                  <strong>Account No:</strong> 8148343713<br />
+                  <strong>IFSC Code:</strong> KKBK0000201<br />
+                  <strong> Branch Name:</strong> Nehru Place, New Delhi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- tp-contact-item-area-end -->
+
+      <!-- map area end  -->
+    </main>
+
+    <!-- footer-area-start -->
+    <footer class="tp-header-height" id="footer">
+      <script>
+        $("#footer").load("footer.html");
+      </script>
+    </footer>
+    <!-- footer-area-end -->
+
+    <!-- JS here -->
+
+    <script src="assets/js/vendor/waypoints.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/jarallax.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

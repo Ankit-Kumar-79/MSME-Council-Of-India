@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Bootstrap Table with Pagination</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .custom-select {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 25px;
+      }
+      .table-img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+      .table thead {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .table tbody tr:hover {
+        background-color: #f1f1f1;
+      }
+      .table tbody tr td {
+        vertical-align: middle;
+        padding: 15px;
+      }
+      .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination {
+        border-radius: 25px;
+      }
+      .page-item.active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      @media (min-width: 768px) {
+        .custom-select {
+          width: 250px;
+          margin-right: 15px;
+          margin-bottom: 0;
+        }
+      }
+      @media (max-width: 576px) {
+        .table-responsive-sm {
+          overflow-x: auto;
+        }
+        .table-img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="d-flex flex-column flex-md-row justify-content-center mb-4">
+        <select class="custom-select shadow-sm">
+          <option selected>Select State</option>
+          <option value="1">Uttar Pradesh West</option>
+          <option value="2">Bihar</option>
+          <option value="3">Maharashtra</option>
+        </select>
+        <select class="custom-select shadow-sm">
+          <option selected>Select Designation</option>
+          <option value="1">District Director</option>
+          <option value="2">Regional Manager</option>
+          <option value="3">Area Supervisor</option>
+        </select>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="table-responsive-sm">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>S. No</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>State</th>
+                <th>District</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>4</td>
+                <td>
+                  <img
+                    src="https://picsum.photos/50"
+                    alt="Image 1"
+                    class="table-img"
+                  />
+                  Ravi Sharma
+                </td>
+                <td>District Director</td>
+                <td>Uttar Pradesh West</td>
+                <td>Agra</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <img
+                    src="https://picsum.photos/50"
+                    alt="Image 2"
+                    class="table-img"
+                  />
+                  Nitesh Singh
+                </td>
+                <td>District Director</td>
+                <td>Bihar</td>
+                <td>Patna</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>
+                  <img
+                    src="https://picsum.photos/50"
+                    alt="Image 3"
+                    class="table-img"
+                  />
+                  Manoj Verma
+                </td>
+                <td>District Director</td>
+                <td>Maharashtra</td>
+                <td>Mumbai</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="pagination-container">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

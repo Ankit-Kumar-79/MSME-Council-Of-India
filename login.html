@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5a623, #f7797d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+
+        .login-card {
+            width: 400px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .login-card h1 {
+            color: #f5576c;
+            /* More vibrant color */
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .login-card input[type="text"],
+        .login-card input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 2px solid;
+            /* Set the border width */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            /* Added transition for border color */
+            border-image: linear-gradient(135deg, #f5a623, #f7797d);
+            /* Define the gradient */
+            border-image-slice: 1;
+            /* Ensures the gradient covers the entire border */
+            outline: none !important;
+        }
+
+        .login-card input[type="text"]:hover,
+        .login-card input[type="password"]:hover,
+        .login-card input[type="text"]:focus,
+        .login-card input[type="password"]:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border: 3px solid;
+            /* Set the border width for focus state */
+            border-image: linear-gradient(135deg, #f5a623, #f7797d);
+            /* Apply the gradient on focus */
+            border-image-slice: 1;
+            /* Ensures the gradient covers the entire border on focus */
+        }
+
+
+        
+
+        .login-card button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #f5a623, #f7797d);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-card button:hover {
+            background: linear-gradient(135deg, #f7797d, #f5a623);
+            transform: translateY(-3px);
+        }
+
+        .login-card a {
+            display: block;
+            margin: 15px 0;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .login-card a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .login-card {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <h1>Webmail</h1>
+        <input type="text" placeholder="Enter your email address">
+        <input type="password" placeholder="Enter your email password">
+        <button>Log in</button>
+        <a href="#">Reset Password</a>
+       
+    </div>
+
+</body>
+
+</html>
